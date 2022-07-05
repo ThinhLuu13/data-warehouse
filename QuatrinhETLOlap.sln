@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.2017
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "ETLOlap_Data_WareHouse", "QuatrinhETLOlap\ETLOlap_Data_WareHouse.dtproj", "{F36DF0EB-FF1A-42B1-9631-7B9BD76EDFB9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F36DF0EB-FF1A-42B1-9631-7B9BD76EDFB9}.Development|Default.ActiveCfg = Development
+		{F36DF0EB-FF1A-42B1-9631-7B9BD76EDFB9}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C581A4D-9B8B-4AAD-93C9-35039475983A}
+	EndGlobalSection
+EndGlobal
