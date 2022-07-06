@@ -11,11 +11,35 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Accident_2020"
   DTS:PackageType="5"
-  DTS:VersionBuild="46"
-  DTS:VersionGUID="{18C788DE-FE00-4D22-9204-1B1E29C76B52}">
+  DTS:VersionBuild="47"
+  DTS:VersionGUID="{376F4485-4A0F-46F6-9320-DD768A9D8D91}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E4E045D7-8851-4D00-BE2F-E81071D96A7F}"
+      DTS:ObjectName="DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-OUIFLJH\SQLEXPRESS;Initial Catalog=Accident_DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{1FBE3720-F532-451E-9C63-E4DA95BCA076}"
+      DTS:ObjectName="DESKTOP-OUIFLJH\SQLEXPRESS.Demo">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-OUIFLJH\SQLEXPRESS;Initial Catalog=Demo;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
@@ -376,8 +400,8 @@
               <connections>
                 <connection
                   refId="Package\Làm sạch dữ liệu\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{8CBC8A55-7116-491F-B081-35C01212905E}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Demo]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -731,8 +755,8 @@
               <connections>
                 <connection
                   refId="Package\Làm sạch dữ liệu\OLE DB Destination 1.Connections[OleDbConnection]"
-                  connectionManagerID="{8CBC8A55-7116-491F-B081-35C01212905E}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Demo]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1095,8 +1119,8 @@
               <connections>
                 <connection
                   refId="Package\Làm sạch dữ liệu\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{8CBC8A55-7116-491F-B081-35C01212905E}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Demo]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2441,8 +2465,8 @@ where [refTable].[accident_severity_name] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo bảng Fact\Fact Table\Accident_Severity.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -2600,8 +2624,8 @@ where [refTable].[urban_or_rural_area_name] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo bảng Fact\Fact Table\Area.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -2759,8 +2783,8 @@ where [refTable].[carriageway_hazards_name] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo bảng Fact\Fact Table\Carriageway_Hazards.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -3072,8 +3096,8 @@ where [refTable].[date_value] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo bảng Fact\Fact Table\Date.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -3229,8 +3253,8 @@ where [refTable].[light_conditions_name] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo bảng Fact\Fact Table\Light_Conditions.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -3388,8 +3412,8 @@ where [refTable].[local_authority_district_name] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo bảng Fact\Fact Table\Local_Authority_District.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -3547,8 +3571,8 @@ where [refTable].[local_authority_highway_name] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo bảng Fact\Fact Table\Local_Authority_Highway.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -3695,8 +3719,8 @@ where [refTable].[local_authority_highway_name] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo bảng Fact\Fact Table\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -3833,15 +3857,11 @@ where [refTable].[local_authority_highway_name] = ?</property>
                           name="accident_index" />
                         <externalMetadataColumn
                           refId="Package\Quá trình tạo bảng Fact\Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[number_of_vehicles]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="i4"
                           name="number_of_vehicles" />
                         <externalMetadataColumn
                           refId="Package\Quá trình tạo bảng Fact\Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[number_of_casualties]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="i4"
                           name="number_of_casualties" />
                         <externalMetadataColumn
                           refId="Package\Quá trình tạo bảng Fact\Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[speed_limit_id]"
@@ -3982,8 +4002,8 @@ where [refTable].[local_authority_highway_name] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo bảng Fact\Fact Table\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="{8CBC8A55-7116-491F-B081-35C01212905E}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Demo]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -4521,8 +4541,8 @@ where [refTable].[police_force_name] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo bảng Fact\Fact Table\Police_force.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -4624,13 +4644,13 @@ where [refTable].[police_force_name] = ?</property>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Road_class]</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Road_Class]</property>
                     <property
                       dataType="System.String"
                       description="Specifies a SQL statement that uses parameters to generate the lookup table."
                       expressionType="Notify"
                       name="SqlCommandParam"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Road_class]) [refTable]
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Road_Class]) [refTable]
 where [refTable].[road_class_name] = ?</property>
                     <property
                       dataType="System.Int32"
@@ -4680,8 +4700,8 @@ where [refTable].[road_class_name] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo bảng Fact\Fact Table\Road_Class.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -4839,8 +4859,8 @@ where [refTable].[road_surface_conditions_name] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo bảng Fact\Fact Table\Road_Surface_Conditions.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -4998,8 +5018,8 @@ where [refTable].[road_type_name] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo bảng Fact\Fact Table\Road_Type.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -5157,8 +5177,8 @@ where [refTable].[special_conditions_at_site_name] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo bảng Fact\Fact Table\Special_Conditions_At_Site.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -5316,8 +5336,8 @@ where [refTable].[speed_limit] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo bảng Fact\Fact Table\Speed_limit.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -5473,8 +5493,8 @@ where [refTable].[time_value] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo bảng Fact\Fact Table\Time.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -5632,8 +5652,8 @@ where [refTable].[weather_conditions_name] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo bảng Fact\Fact Table\Weather_Conditions.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -5735,74 +5755,74 @@ where [refTable].[weather_conditions_name] = ?</property>
                   startId="Package\Quá trình tạo bảng Fact\Fact Table\Data Conversion 1.Outputs[Data Conversion Output]" />
                 <path
                   refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output13]"
-                  endId="Package\Quá trình tạo bảng Fact\Fact Table\Time.Inputs[Lookup Input]"
+                  endId="Package\Quá trình tạo bảng Fact\Fact Table\Road_Type.Inputs[Lookup Input]"
                   name="Lookup Match Output"
-                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Carriageway_Hazards.Outputs[Lookup Match Output]" />
+                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Road_Class.Outputs[Lookup Match Output]" />
                 <path
                   refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output12]"
-                  endId="Package\Quá trình tạo bảng Fact\Fact Table\Road_Class.Inputs[Lookup Input]"
-                  name="Lookup Match Output"
-                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Local_Authority_Highway.Outputs[Lookup Match Output]" />
-                <path
-                  refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output11]"
-                  endId="Package\Quá trình tạo bảng Fact\Fact Table\Carriageway_Hazards.Inputs[Lookup Input]"
-                  name="Lookup Match Output"
-                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Area.Outputs[Lookup Match Output]" />
-                <path
-                  refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output10]"
-                  endId="Package\Quá trình tạo bảng Fact\Fact Table\Area.Inputs[Lookup Input]"
-                  name="Lookup Match Output"
-                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Special_Conditions_At_Site.Outputs[Lookup Match Output]" />
-                <path
-                  refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output9]"
-                  endId="Package\Quá trình tạo bảng Fact\Fact Table\Special_Conditions_At_Site.Inputs[Lookup Input]"
-                  name="Lookup Match Output"
-                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Road_Surface_Conditions.Outputs[Lookup Match Output]" />
-                <path
-                  refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output8]"
-                  endId="Package\Quá trình tạo bảng Fact\Fact Table\Road_Surface_Conditions.Inputs[Lookup Input]"
-                  name="Lookup Match Output"
-                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Weather_Conditions.Outputs[Lookup Match Output]" />
-                <path
-                  refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output7]"
-                  endId="Package\Quá trình tạo bảng Fact\Fact Table\Weather_Conditions.Inputs[Lookup Input]"
-                  name="Lookup Match Output"
-                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Light_Conditions.Outputs[Lookup Match Output]" />
-                <path
-                  refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output6]"
-                  endId="Package\Quá trình tạo bảng Fact\Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                  name="Lookup Match Output"
-                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Time.Outputs[Lookup Match Output]" />
-                <path
-                  refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output5]"
-                  endId="Package\Quá trình tạo bảng Fact\Fact Table\Local_Authority_Highway.Inputs[Lookup Input]"
-                  name="Lookup Match Output"
-                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Local_Authority_District.Outputs[Lookup Match Output]" />
-                <path
-                  refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output4]"
-                  endId="Package\Quá trình tạo bảng Fact\Fact Table\Local_Authority_District.Inputs[Lookup Input]"
-                  name="Lookup Match Output"
-                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Date.Outputs[Lookup Match Output]" />
-                <path
-                  refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output3]"
-                  endId="Package\Quá trình tạo bảng Fact\Fact Table\Data Conversion 1.Inputs[Data Conversion Input]"
-                  name="Lookup Match Output"
-                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Accident_Severity.Outputs[Lookup Match Output]" />
-                <path
-                  refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output2]"
-                  endId="Package\Quá trình tạo bảng Fact\Fact Table\Accident_Severity.Inputs[Lookup Input]"
-                  name="Lookup Match Output"
-                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Police_force.Outputs[Lookup Match Output]" />
-                <path
-                  refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output1]"
                   endId="Package\Quá trình tạo bảng Fact\Fact Table\Police_force.Inputs[Lookup Input]"
                   name="Lookup Match Output"
                   startId="Package\Quá trình tạo bảng Fact\Fact Table\Speed_limit.Outputs[Lookup Match Output]" />
                 <path
-                  refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output]"
-                  endId="Package\Quá trình tạo bảng Fact\Fact Table\Road_Type.Inputs[Lookup Input]"
+                  refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output11]"
+                  endId="Package\Quá trình tạo bảng Fact\Fact Table\Accident_Severity.Inputs[Lookup Input]"
                   name="Lookup Match Output"
-                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Road_Class.Outputs[Lookup Match Output]" />
+                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Police_force.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output10]"
+                  endId="Package\Quá trình tạo bảng Fact\Fact Table\Data Conversion 1.Inputs[Data Conversion Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Accident_Severity.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output9]"
+                  endId="Package\Quá trình tạo bảng Fact\Fact Table\Local_Authority_District.Inputs[Lookup Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Date.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output8]"
+                  endId="Package\Quá trình tạo bảng Fact\Fact Table\Local_Authority_Highway.Inputs[Lookup Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Local_Authority_District.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output7]"
+                  endId="Package\Quá trình tạo bảng Fact\Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Time.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output6]"
+                  endId="Package\Quá trình tạo bảng Fact\Fact Table\Weather_Conditions.Inputs[Lookup Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Light_Conditions.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output5]"
+                  endId="Package\Quá trình tạo bảng Fact\Fact Table\Road_Surface_Conditions.Inputs[Lookup Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Weather_Conditions.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output4]"
+                  endId="Package\Quá trình tạo bảng Fact\Fact Table\Special_Conditions_At_Site.Inputs[Lookup Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Road_Surface_Conditions.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output3]"
+                  endId="Package\Quá trình tạo bảng Fact\Fact Table\Area.Inputs[Lookup Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Special_Conditions_At_Site.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output2]"
+                  endId="Package\Quá trình tạo bảng Fact\Fact Table\Carriageway_Hazards.Inputs[Lookup Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Area.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output1]"
+                  endId="Package\Quá trình tạo bảng Fact\Fact Table\Road_Class.Inputs[Lookup Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Local_Authority_Highway.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output]"
+                  endId="Package\Quá trình tạo bảng Fact\Fact Table\Time.Inputs[Lookup Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Quá trình tạo bảng Fact\Fact Table\Carriageway_Hazards.Outputs[Lookup Match Output]" />
                 <path
                   refId="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output14]"
                   endId="Package\Quá trình tạo bảng Fact\Fact Table\Light_Conditions.Inputs[Lookup Input]"
@@ -5998,8 +6018,8 @@ where [refTable].[weather_conditions_name] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Accident_Severity\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -6118,8 +6138,8 @@ where [refTable].[weather_conditions_name] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Accident_Severity\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="{8CBC8A55-7116-491F-B081-35C01212905E}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Demo]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -7747,8 +7767,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Carriageway_Hazards\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -7867,8 +7887,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Carriageway_Hazards\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="{8CBC8A55-7116-491F-B081-35C01212905E}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Demo]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -9742,8 +9762,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Date\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -9910,8 +9930,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Date\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="{8CBC8A55-7116-491F-B081-35C01212905E}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Demo]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -11570,8 +11590,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Day_Of_Week\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -11818,8 +11838,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Light_Conditions\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -11938,8 +11958,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Light_Conditions\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="{8CBC8A55-7116-491F-B081-35C01212905E}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Demo]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -13567,8 +13587,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Local_Authority_District\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -13687,8 +13707,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Local_Authority_District\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="{8CBC8A55-7116-491F-B081-35C01212905E}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Demo]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -15325,8 +15345,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Local_Authority_Highway\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -15445,8 +15465,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Local_Authority_Highway\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="{8CBC8A55-7116-491F-B081-35C01212905E}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Demo]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -17083,8 +17103,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Police_Force\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -17203,8 +17223,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Police_Force\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="{8CBC8A55-7116-491F-B081-35C01212905E}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Demo]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -18832,8 +18852,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Road_Class\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -18952,8 +18972,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Road_Class\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="{8CBC8A55-7116-491F-B081-35C01212905E}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Demo]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -20581,8 +20601,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Road_Surface_Conditions\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -20701,8 +20721,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Road_Surface_Conditions\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="{8CBC8A55-7116-491F-B081-35C01212905E}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Demo]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -22339,8 +22359,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Road_Type\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -22459,8 +22479,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Road_Type\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="{8CBC8A55-7116-491F-B081-35C01212905E}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Demo]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -24088,8 +24108,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Special_Conditions_At_Site\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -24208,8 +24228,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Special_Conditions_At_Site\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="{8CBC8A55-7116-491F-B081-35C01212905E}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Demo]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -25924,8 +25944,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Speed_Limit\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -26039,8 +26059,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Speed_Limit\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="{8CBC8A55-7116-491F-B081-35C01212905E}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Demo]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -27780,8 +27800,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Time\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -27924,8 +27944,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Time\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="{8CBC8A55-7116-491F-B081-35C01212905E}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Demo]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -29558,8 +29578,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Urban_Or_Rural_Area\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -29678,8 +29698,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Urban_Or_Rural_Area\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="{8CBC8A55-7116-491F-B081-35C01212905E}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Demo]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -31307,8 +31327,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Weather_Conditions\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Accident_DW]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Accident_DW]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -31427,8 +31447,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Quá trình tạo các bảng Dimension\Dim_Weather_Conditions\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="{8CBC8A55-7116-491F-B081-35C01212905E}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-OUIFLJH_SQLEXPRESS.Demo]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OUIFLJH\SQLEXPRESS.Demo]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -32902,7 +32922,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}"
+          SQLTask:Connection="{E4E045D7-8851-4D00-BE2F-E81071D96A7F}"
           SQLTask:SqlStatementSource="alter table Fact&#xA;add constraint fk_Fact_Accident_Severity&#xA;foreign key(accident_severity_id) references Accident_Severity(accident_severity_id);&#xA;GO&#xA;alter table Fact&#xA;add constraint fk_Fact_Carriageway_Hazards&#xA;foreign key(carriageway_hazards_id) references Carriageway_Hazards(carriageway_hazards_id);&#xA;GO&#xA;alter table Fact&#xA;add constraint fk_Fact_Date&#xA;foreign key(date_id) references Date(date_id);&#xA;GO&#xA;alter table Fact&#xA;add constraint fk_Light_Conditions&#xA;foreign key(light_conditions_id) references Light_Conditions(light_conditions_id);&#xA;GO&#xA;alter table Fact&#xA;add constraint fk_Local_Authority_Highway&#xA;foreign key(local_authority_highway_id) references Local_Authority_Highway(local_authority_highway_id);&#xA;GO&#xA;alter table Fact&#xA;add constraint fk_Local_Authority_District&#xA;foreign key(local_authority_district_id) references Local_Authority_District(local_authority_district_id);&#xA;GO&#xA;alter table Fact&#xA;add constraint fk_Police_Force&#xA;foreign key(police_force_id) references Police_Force(police_force_id);&#xA;GO&#xA;alter table Fact&#xA;add constraint fk_Road_Class&#xA;foreign key(road_class_id) references Road_Class(road_class_id);&#xA;GO&#xA;alter table Fact&#xA;add constraint fk_Road_Surface_Conditions&#xA;foreign key(road_surface_conditions_id) references Road_Surface_Conditions(road_surface_conditions_id);&#xA;GO&#xA;alter table Fact&#xA;add constraint fk_Road_Type&#xA;foreign key(road_type_id) references Road_Type(road_type_id);&#xA;GO&#xA;alter table Fact&#xA;add constraint fk_Special_Conditions_At_Site&#xA;foreign key(special_conditions_at_site_id) references Special_Conditions_At_Site(special_conditions_at_site_id);&#xA;GO&#xA;alter table Fact&#xA;add constraint fk_Speed_Limit&#xA;foreign key(speed_limit_id) references Speed_Limit(speed_limit_id);&#xA;GO&#xA;alter table Fact&#xA;add constraint fk_Time&#xA;foreign key(Time_id) references Time(Time_id);&#xA;GO&#xA;alter table Fact&#xA;add constraint fk_Urban_Or_Rural_Area&#xA;foreign key(urban_or_rural_area_id) references Urban_Or_Rural_Area(urban_or_rural_area_id);&#xA;GO&#xA;alter table Fact&#xA;add constraint fk_Weather_Conditions&#xA;foreign key(weather_conditions_id) references Weather_Conditions(weather_conditions_id);&#xA;GO&#xA;alter table Fact&#xA;add constraint fk_Date&#xA;foreign key(date_id) references Date(date_id);&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -32919,7 +32939,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}"
+          SQLTask:Connection="{E4E045D7-8851-4D00-BE2F-E81071D96A7F}"
           SQLTask:SqlStatementSource="delete from Accident_Severity;&#xA;delete from Carriageway_Hazards;&#xA;delete from Date;&#xA;delete from Day_Of_Week;&#xA;delete from Light_Conditions;&#xA;delete from Local_Authority_District;&#xA;delete from Local_Authority_Highway;&#xA;delete from Police_Force;&#xA;delete from Road_Class;&#xA;delete from Road_Surface_Conditions;&#xA;delete from Road_Type;&#xA;delete from Special_Conditions_At_Site;&#xA;delete from Speed_Limit;&#xA;delete from Time;&#xA;delete from Urban_Or_Rural_Area;&#xA;delete from Weather_Conditions;&#xA;delete from Fact;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -32936,7 +32956,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{8CBC8A55-7116-491F-B081-35C01212905E}"
+          SQLTask:Connection="{1FBE3720-F532-451E-9C63-E4DA95BCA076}"
           SQLTask:SqlStatementSource="delete from DataNull;&#xA;delete from DataClean;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -32953,7 +32973,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{325F8B9B-9FEE-4C36-8311-B4EDB94A1615}"
+          SQLTask:Connection="{E4E045D7-8851-4D00-BE2F-E81071D96A7F}"
           SQLTask:SqlStatementSource="alter table Fact&#xA;drop constraint fk_Fact_Accident_Severity;&#xA;GO&#xA;alter table Fact&#xA;drop constraint fk_Fact_Carriageway_Hazards;&#xA;GO&#xA;alter table Fact&#xA;drop constraint fk_Fact_Date;&#xA;GO&#xA;alter table Fact&#xA;drop constraint fk_Light_Conditions;&#xA;GO&#xA;alter table Fact&#xA;drop constraint fk_Local_Authority_Highway;&#xA;GO&#xA;alter table Fact&#xA;drop constraint fk_Local_Authority_District;&#xA;GO&#xA;alter table Fact&#xA;drop constraint fk_Police_Force;&#xA;GO&#xA;alter table Fact&#xA;drop constraint fk_Road_Class;&#xA;GO&#xA;alter table Fact&#xA;drop constraint fk_Road_Surface_Conditions;&#xA;GO&#xA;alter table Fact&#xA;drop constraint fk_Road_Type;&#xA;GO&#xA;alter table Fact&#xA;drop constraint fk_Special_Conditions_At_Site;&#xA;GO&#xA;alter table Fact&#xA;drop constraint fk_Speed_Limit;&#xA;GO&#xA;alter table Fact&#xA;drop constraint fk_Time;&#xA;GO&#xA;alter table Fact&#xA;drop constraint fk_Urban_Or_Rural_Area;&#xA;GO&#xA;alter table Fact&#xA;drop constraint fk_Weather_Conditions;&#xA;GO&#xA;alter table Fact&#xA;drop constraint fk_Date;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -33361,9 +33381,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -33445,14 +33463,51 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Làm sạch dữ liệu\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Làm sạch dữ liệu\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Làm sạch dữ liệu\OLE DB Destination 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Quá trình tạo bảng Fact\Fact Table">
     <LayoutInfo>
@@ -33463,21 +33518,21 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           Id="Package\Quá trình tạo bảng Fact\Fact Table\Local_Authority_District"
           TopLeft="707,676" />
         <NodeLayout
-          Size="199,42"
-          Id="Package\Quá trình tạo bảng Fact\Fact Table\Road_Surface_Conditions"
-          TopLeft="634,1142" />
+          Size="206,42"
+          Id="Package\Quá trình tạo bảng Fact\Fact Table\Special_Conditions_At_Site"
+          TopLeft="754,1248" />
         <NodeLayout
-          Size="134,42"
-          Id="Package\Quá trình tạo bảng Fact\Fact Table\Speed_limit"
-          TopLeft="326,191" />
-        <NodeLayout
-          Size="174,42"
-          Id="Package\Quá trình tạo bảng Fact\Fact Table\Weather_Conditions"
-          TopLeft="581,1043" />
+          Size="101,42"
+          Id="Package\Quá trình tạo bảng Fact\Fact Table\Date"
+          TopLeft="809,593" />
         <NodeLayout
           Size="150,42"
           Id="Package\Quá trình tạo bảng Fact\Fact Table\OLE DB Source"
           TopLeft="101,22" />
+        <NodeLayout
+          Size="100,42"
+          Id="Package\Quá trình tạo bảng Fact\Fact Table\Area"
+          TopLeft="824,1341" />
         <NodeLayout
           Size="102,42"
           Id="Package\Quá trình tạo bảng Fact\Fact Table\Time"
@@ -33487,17 +33542,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           Id="Package\Quá trình tạo bảng Fact\Fact Table\Local_Authority_Highway"
           TopLeft="650,760" />
         <NodeLayout
-          Size="101,42"
-          Id="Package\Quá trình tạo bảng Fact\Fact Table\Date"
-          TopLeft="809,593" />
-        <NodeLayout
           Size="135,42"
           Id="Package\Quá trình tạo bảng Fact\Fact Table\Police_force"
           TopLeft="473,299" />
         <NodeLayout
-          Size="100,42"
-          Id="Package\Quá trình tạo bảng Fact\Fact Table\Area"
-          TopLeft="824,1341" />
+          Size="132,42"
+          Id="Package\Quá trình tạo bảng Fact\Fact Table\Road_Type"
+          TopLeft="597,909" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Quá trình tạo bảng Fact\Fact Table\Road_Class"
+          TopLeft="601,839" />
         <NodeLayout
           Size="181,42"
           Id="Package\Quá trình tạo bảng Fact\Fact Table\Carriageway_Hazards"
@@ -33515,13 +33570,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           Id="Package\Quá trình tạo bảng Fact\Fact Table\Light_Conditions"
           TopLeft="575,978" />
         <NodeLayout
-          Size="133,42"
-          Id="Package\Quá trình tạo bảng Fact\Fact Table\Road_Class"
-          TopLeft="601,839" />
+          Size="199,42"
+          Id="Package\Quá trình tạo bảng Fact\Fact Table\Road_Surface_Conditions"
+          TopLeft="634,1142" />
         <NodeLayout
-          Size="132,42"
-          Id="Package\Quá trình tạo bảng Fact\Fact Table\Road_Type"
-          TopLeft="597,909" />
+          Size="174,42"
+          Id="Package\Quá trình tạo bảng Fact\Fact Table\Weather_Conditions"
+          TopLeft="581,1043" />
         <NodeLayout
           Size="156,42"
           Id="Package\Quá trình tạo bảng Fact\Fact Table\Data Conversion"
@@ -33531,9 +33586,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           Id="Package\Quá trình tạo bảng Fact\Fact Table\Accident_Severity"
           TopLeft="574,422" />
         <NodeLayout
-          Size="206,42"
-          Id="Package\Quá trình tạo bảng Fact\Fact Table\Special_Conditions_At_Site"
-          TopLeft="754,1248" />
+          Size="134,42"
+          Id="Package\Quá trình tạo bảng Fact\Fact Table\Speed_limit"
+          TopLeft="326,191" />
         <EdgeLayout
           Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[OLE DB Source Output]"
           TopLeft="176,64">
@@ -33605,7 +33660,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output]"
+          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output13]"
           TopLeft="665.25,881">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -33629,7 +33684,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output1]"
+          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output12]"
           TopLeft="393,233">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -33665,7 +33720,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output2]"
+          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output11]"
           TopLeft="540.5,341">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -33701,7 +33756,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output3]"
+          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output10]"
           TopLeft="655,464">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -33737,7 +33792,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output4]"
+          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output9]"
           TopLeft="859.5,635">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -33773,7 +33828,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output5]"
+          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output8]"
           TopLeft="802,718">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -33809,7 +33864,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output6]"
+          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output7]"
           TopLeft="968,1555">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -33845,7 +33900,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output7]"
+          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output6]"
           TopLeft="653.5,1020">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -33881,7 +33936,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output8]"
+          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output5]"
           TopLeft="668,1085">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -33917,7 +33972,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output9]"
+          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output4]"
           TopLeft="733.5,1184">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -33953,7 +34008,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output10]"
+          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output3]"
           TopLeft="857,1290">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -33989,7 +34044,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output11]"
+          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output2]"
           TopLeft="874,1383">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -34025,7 +34080,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output12]"
+          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output1]"
           TopLeft="749,802">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -34061,7 +34116,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output13]"
+          Id="Package\Quá trình tạo bảng Fact\Fact Table.Paths[Lookup Match Output]"
           TopLeft="931.5,1461">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -34173,7 +34228,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Local_Authority_District]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -34183,7 +34251,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Special_Conditions_At_Site]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -34193,7 +34274,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Date]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -34216,7 +34310,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Urban_Or_Rural_Area]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -34226,7 +34333,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Time]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -34236,7 +34356,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Local_Authority_Highway]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -34246,7 +34379,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Police_Force]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -34256,7 +34402,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -34266,7 +34412,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -34279,7 +34425,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Road_Class]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -34289,7 +34448,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Carriageway_Hazards]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -34312,7 +34484,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Light_Conditions]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -34322,7 +34507,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Road_Surface_Conditions]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -34332,7 +34530,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -34342,7 +34540,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -34355,7 +34553,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accident_Severity]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -34365,7 +34576,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Speed_Limit]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -34373,7 +34597,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
     design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Accident_Severity">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="163,42"
           Id="Package\Quá trình tạo các bảng Dimension\Dim_Accident_Severity\Script Component"
@@ -34425,9 +34649,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -34461,9 +34683,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -34497,9 +34717,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -34533,19 +34751,43 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Accident_Severity\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Accident_Severity\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Carriageway_Hazards">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="163,42"
           Id="Package\Quá trình tạo các bảng Dimension\Dim_Carriageway_Hazards\Script Component"
@@ -34597,9 +34839,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -34633,9 +34873,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -34669,9 +34907,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -34705,19 +34941,43 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Carriageway_Hazards\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Carriageway_Hazards\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Date">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="171,42"
           Id="Package\Quá trình tạo các bảng Dimension\Dim_Date\OLE DB Destination"
@@ -34777,9 +35037,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -34801,9 +35059,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -34837,9 +35093,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -34861,9 +35115,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -34897,9 +35149,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -34933,14 +35183,38 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Date\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Date\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Day_Of_Week">
     <LayoutInfo>
@@ -34991,11 +35265,24 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Day_Of_Week\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Light_Conditions">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="163,42"
           Id="Package\Quá trình tạo các bảng Dimension\Dim_Light_Conditions\Script Component"
@@ -35047,9 +35334,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -35083,9 +35368,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -35119,9 +35402,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -35155,19 +35436,43 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Light_Conditions\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Light_Conditions\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Local_Authority_District">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="163,42"
           Id="Package\Quá trình tạo các bảng Dimension\Dim_Local_Authority_District\Script Component"
@@ -35219,9 +35524,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -35255,9 +35558,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -35291,9 +35592,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -35327,19 +35626,43 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Local_Authority_District\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Local_Authority_District\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Local_Authority_Highway">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="163,42"
           Id="Package\Quá trình tạo các bảng Dimension\Dim_Local_Authority_Highway\Script Component"
@@ -35391,9 +35714,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -35427,9 +35748,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -35463,9 +35782,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -35499,19 +35816,43 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Local_Authority_Highway\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Local_Authority_Highway\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Police_Force">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="163,42"
           Id="Package\Quá trình tạo các bảng Dimension\Dim_Police_Force\Script Component"
@@ -35563,9 +35904,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -35599,9 +35938,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -35635,9 +35972,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -35671,19 +36006,43 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Police_Force\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Police_Force\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Road_Class">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="163,42"
           Id="Package\Quá trình tạo các bảng Dimension\Dim_Road_Class\Script Component"
@@ -35735,9 +36094,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -35771,9 +36128,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -35807,9 +36162,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -35843,19 +36196,43 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Road_Class\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Road_Class\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Road_Surface_Conditions">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="163,42"
           Id="Package\Quá trình tạo các bảng Dimension\Dim_Road_Surface_Conditions\Script Component"
@@ -35907,9 +36284,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -35943,9 +36318,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -35979,9 +36352,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -36015,14 +36386,38 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Road_Surface_Conditions\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Road_Surface_Conditions\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Road_Type">
     <LayoutInfo>
@@ -36187,11 +36582,37 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Road_Type\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Road_Type\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Special_Conditions_At_Site">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="163,42"
           Id="Package\Quá trình tạo các bảng Dimension\Dim_Special_Conditions_At_Site\Script Component"
@@ -36243,9 +36664,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -36279,9 +36698,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -36315,9 +36732,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -36351,19 +36766,43 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Special_Conditions_At_Site\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Special_Conditions_At_Site\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Speed_Limit">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="163,42"
           Id="Package\Quá trình tạo các bảng Dimension\Dim_Speed_Limit\Script Component"
@@ -36419,9 +36858,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -36443,9 +36880,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -36479,9 +36914,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -36515,9 +36948,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -36551,14 +36982,25 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Speed_Limit\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Speed_Limit\OLE DB Destination">
     <Properties>
@@ -36576,7 +37018,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
     design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Time">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="171,42"
           Id="Package\Quá trình tạo các bảng Dimension\Dim_Time\OLE DB Destination"
@@ -36620,9 +37062,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -36656,9 +37096,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -36680,9 +37118,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -36716,9 +37152,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -36752,19 +37186,43 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Time\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Time\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Urban_Or_Rural_Area">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="163,42"
           Id="Package\Quá trình tạo các bảng Dimension\Dim_Urban_Or_Rural_Area\Script Component"
@@ -36816,9 +37274,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -36852,9 +37308,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -36888,9 +37342,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -36924,19 +37376,43 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Urban_Or_Rural_Area\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Urban_Or_Rural_Area\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Weather_Conditions">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="163,42"
           Id="Package\Quá trình tạo các bảng Dimension\Dim_Weather_Conditions\Script Component"
@@ -36988,9 +37464,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -37024,9 +37498,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -37060,9 +37532,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -37096,13 +37566,37 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Weather_Conditions\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Quá trình tạo các bảng Dimension\Dim_Weather_Conditions\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
